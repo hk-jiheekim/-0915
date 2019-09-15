@@ -3,21 +3,30 @@
 <head>
 	<title>불쾌지수를 구해보자</title>
 	<style>
-		#tem, #wartem{font-size: 20px; margin: auto;}
-		#fp{font-size: 12px; margin: auto;}
-
+		@font-face { font-family: 'Eoe_Zno_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+		body{margin: auto; display: block; padding: 0px; text-align: center; font-family: 'Eoe_Zno_B';  }
+		p{font-size: 35px; padding-top: 50px; }
+		#tem, #wartem{font-size: 27px; margin: auto; display: block; border-radius: 4px;box-shadow: 0px 0px 2px inset; border: none; box-shadow: 0px 0px 5px inset; 
+			margin: auto; display: block; border-radius: 4px; margin-top: 50px; }
+		#monitor{font-size: 25px;}
+		#fp{font-size: 15px;}
+		.sg{position: absolute; left: 50px; top: 150px;}
 	</style>
+	
 </head>
 <body>
-	<h1>불쾌지수를 알려드립니다.</h1>
+	<p><strong>불쾌지수를 알려드립니다.</strong></p>
 	<br><br>
 	<input type="text" placeholder="기온을 입력하세요" id="tem">
-	<input type="text" placeholder="습구온도를 입력하세요" id="wartem">
-	<input type="button" value="확인" id="okb">
-	<br><br>
-	<div id="monitor">불쾌지수는 입니다.</div>
 	<br>
+	<input type="text" placeholder="습구온도를 입력하세요" id="wartem">
+	<br><br>
+	<input type="button" value="확인" id="okb">
+	<br><br><br>
+	<div id="monitor">불쾌지수는 입니다.</div>
+	<br><br>
 	<div id="fp">※70을 넘어 갈수록 불쾌해짐.</div>
+	<img class="sg" src="./sgsg.jfif">
 	<script type="text/javascript">
 		okb.onclick = function(){
 			monitor.innerHTML="불쾌지수는"+0.72*(tem.value+ wartem.value)+40.6+"입니다."
